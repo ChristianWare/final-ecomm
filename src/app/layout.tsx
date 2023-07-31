@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
@@ -28,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang='en' className={`${poppins.variable} ${montserrat.variable}`}>
       <body>
-        <header>Header</header>
-        {children}
+        <Header />
+        <main className='bg-primary-gradient min-h-screen'>{children}</main>
         <footer>Footer</footer>
       </body>
     </html>
